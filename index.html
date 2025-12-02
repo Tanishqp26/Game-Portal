@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>PixelForge — Student Gaming Portal</title>
+  <title>Game WebPage</title>
+
   <style>
     :root{
       --bg-1: #071026;
@@ -17,32 +18,26 @@
       --maxw: 1100px;
     }
     *{box-sizing:border-box}
-    html,body{height:100%}
     body{
       margin:0;
       font-family: Inter, ui-sans-serif, system-ui;
-      color:#e9f0ff;
       background: radial-gradient(1200px 600px at 10% 10%, rgba(108,99,255,0.08), transparent 8%),
                   linear-gradient(180deg,var(--bg-1), var(--bg-2));
-      display:flex;
-      align-items:flex-start;
-      justify-content:center;
+      color:#e9f0ff;
       padding:36px 20px;
+      display:flex;
+      justify-content:center;
     }
-
     .wrap{
       width:100%;
       max-width:var(--maxw);
-      position:relative;
     }
 
     header{
       display:flex;
       align-items:center;
       justify-content:space-between;
-      margin-bottom:10px;
     }
-
     .brand{
       display:flex;
       gap:14px;
@@ -53,70 +48,56 @@
       border-radius:12px;
       background:linear-gradient(135deg,var(--accent),var(--accent-2));
       display:flex;align-items:center;justify-content:center;
-      font-weight:800;color:white;font-family:monospace;
+      font-weight:800;font-family:monospace;color:white;
     }
 
     nav{display:flex;gap:12px}
     nav a{
-      color:var(--muted);
+      padding:8px 14px;
+      border-radius:10px;
       text-decoration:none;
       font-weight:600;
-      padding:8px 12px;
+      color:var(--muted);
     }
     nav a.primary{
       background:var(--accent);
       color:white;
-      border-radius:10px;
     }
 
     .info-bar{
       background: rgba(255,255,255,0.05);
       padding: 14px 20px;
-      margin: 14px 0 24px 0;
+      margin: 18px 0 30px 0;
       border-radius: 12px;
-      border: 1px solid rgba(255,255,255,0.06);
       backdrop-filter: blur(8px);
-      font-size: 14px;
+      border:1px solid rgba(255,255,255,0.06);
+      font-size:14px;
     }
 
     .card{
-      background: var(--card);
-      border-radius: var(--radius);
-      padding: 20px;
-      box-shadow: 0 10px 30px rgba(2,6,23,0.6);
-      border: 1px solid rgba(255,255,255,0.04);
-    }
-
-    .games-main{
-      margin-top:20px;
-    }
-
-    .game-card{
-      margin-top:20px;
-      padding:20px;
+      background:var(--glass);
+      padding:22px;
       border-radius:14px;
-      background: var(--glass);
-      box-shadow:0 10px 25px rgba(2,6,23,0.45);
-      border:1px solid rgba(255,255,255,0.04);
+      border:1px solid rgba(255,255,255,0.05);
+      box-shadow:0 10px 30px rgba(0,0,0,0.4);
     }
 
-    .game-card a{
+    .btn{
       display:inline-block;
       margin-top:14px;
       padding:10px 16px;
       background:var(--accent);
       color:white;
+      font-weight:700;
       border-radius:10px;
       text-decoration:none;
-      font-weight:700;
     }
 
     footer{
-      margin-top:28px;
+      margin-top:40px;
       text-align:center;
       color:var(--muted);
       font-size:13px;
-      padding:18px;
     }
   </style>
 </head>
@@ -129,8 +110,8 @@
       <div class="brand">
         <div class="logo">PF</div>
         <div>
-          <div style="font-weight:700;font-size:20px">PixelForge</div>
-          <div style="font-size:12px;color:var(--muted)">Student Gaming Portal</div>
+          <div style="font-weight:700;font-size:20px">Activity 1</div>
+          <div style="font-size:12px;color:var(--muted)">Tanishq Pandey | 23BCG10062</div>
         </div>
       </div>
 
@@ -140,7 +121,7 @@
       </nav>
     </header>
 
-    <!-- STUDENT INFO -->
+    <!-- STUDENT DETAILS -->
     <div class="info-bar">
       <strong>Student Name:</strong> Tanishq Pandey &nbsp; | &nbsp;
       <strong>Reg No:</strong> 23BCG10062 &nbsp; | &nbsp;
@@ -149,24 +130,12 @@
       <strong>Activity:</strong> 01
     </div>
 
-    <!-- FEATURED GAME (MAIN CONTENT NOW) -->
-    <section id="featured" class="games-main">
+    <!-- MAIN FEATURED GAME -->
+    <section id="featured">
       <div class="card">
-        <h2 style="margin-top:0">Featured Game</h2>
-        <p style="color:var(--muted)">Ball Bounce — HTML5 Canvas Physics Game</p>
-
-        <a href="games/ball-bounce/">Play as Guest</a>
-      </div>
-    </section>
-
-    <!-- GAMES COLLECTION — ONLY ONE BOX NOW -->
-    <section id="games" style="margin-top:30px">
-      <h2>Games Collection</h2>
-
-      <div class="game-card">
-        <h3>Ball Bounce</h3>
-        <p style="color:var(--muted)">A physics-based canvas bounce simulation.</p>
-        <a href="games/ball-bounce/">Play</a>
+        <h2 style="margin-top:0">Game</h2>
+        <p style="color:var(--muted)">Ball Bounce Game</p>
+        <a class="btn" href="games/ball-bounce/">Play</a>
       </div>
     </section>
 
@@ -174,6 +143,7 @@
     <footer>
       © <span id="year"></span> PixelForge • Hosted on GitHub Pages
     </footer>
+
   </div>
 
   <script>
