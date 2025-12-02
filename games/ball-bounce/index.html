@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ball Bounce — PixelForge</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <h1>Ball Bounce</h1>
+    <p class="info">Click canvas to add a ball. Press <strong>Space</strong> to pause/resume. Resize window to fit.</p>
+
+    <canvas id="gameCanvas"></canvas>
+
+    <div class="controls">
+      <button id="clearBtn">Clear Balls</button>
+      <label>Gravity <input id="grav" type="range" min="0" max="1" step="0.01" value="0.2"></label>
+      <label>Bounce <input id="bounce" type="range" min="0.1" max="1" step="0.01" value="0.8"></label>
+    </div>
+
+    <footer>Made for assignment — hostable on GitHub Pages</footer>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
